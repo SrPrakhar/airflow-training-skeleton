@@ -32,7 +32,7 @@ http_to_gcs = HttpToGcsOperator(
   endpoint=f"/history?start_at={{yesterday_ds}}&end_at={{ds}}&symbols=EUR&base=GBP",
   #http_conn_id="airflow-training-currency-http",
   http_conn_id="http-default",
-  gcs_path="currency/{{ ds }}-" + currency + ".json",
+  gcs_path="EUR/{{ ds }}-" + "EUR" + ".json",
   gcs_bucket="airflow-training-data-11",
   dag=dag,
 )
