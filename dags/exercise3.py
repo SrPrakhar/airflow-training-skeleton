@@ -39,7 +39,7 @@ print_weekday = PythonOperator(
 
 branching = BranchPythonOperator(
   task_id="branching", 
-  python_callable=_get_weekday, 
+  python_callable=_get_email_name, 
   provide_context=True, 
   dag=dag
 )
