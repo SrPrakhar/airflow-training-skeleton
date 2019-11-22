@@ -8,13 +8,13 @@ from airflow.operators.python_operator import PythonOperator
 
 args = {
     'owner': 'Prakhar',
-    'start_date': airflow.utils.dates.days_ago(2),
+    'start_date': '2019-11-17',
 }
 
 dag = DAG(
     dag_id='excercise2',
     default_args=args,
-    schedule_interval="@once",
+    schedule_interval="@daily",
 )
 
 def print_execution_date(**context):
