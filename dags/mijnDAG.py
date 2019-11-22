@@ -22,7 +22,7 @@ def print_awesome_string():
     print('Hello, world!')
 
 # [START howto_operator_bash]
-print_hello_world = PthonOperator(
+print_hello_world = PythonOperator(
     task_id="print_awesome_string",
     python_callable=print_awesome_string,
     provide_context=True,
