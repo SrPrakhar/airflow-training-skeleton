@@ -5,7 +5,7 @@ from airflow.models import DAG
 
 args = {
 "owner": "Prakhar",
-'start_date': datetime(2019, 09, 20),
+'start_date': datetime(2019, 9, 20),
 }
 
 dag = DAG(
