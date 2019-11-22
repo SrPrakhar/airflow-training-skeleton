@@ -8,7 +8,7 @@ from airflow.operators.python_operator import PythonOperator, BranchPythonOperat
 
 args = {
     'owner': 'Prakhar',
-    #'start_date': datetime(2019, 11, 17),
+    'start_date': airflow.utils.dates.days_ago(2),
 }
 
 dag = DAG(
