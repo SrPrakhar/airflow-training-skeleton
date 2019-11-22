@@ -17,10 +17,25 @@ dag = DAG(
     schedule_interval="@daily",
 )
 
-
-
 def _get_weekday(execution_date, **context):
-  return execution_date.strftime("%a")
+    value = execution_date.strftime("%a")
+    return value
+
+def _get_email_name(execution_date, **context):
+    value = execution_date.strftime("%a")
+    if Value in ["Mon"]:
+        return 'email_bob'
+    elseif Value in ["Tue", "Thu"]:
+        retuen 'email_joe'
+    else:
+        return 'email_alice'
+    
+print_weekday = PythonOperator(
+    task_id="print_weekday",
+    python_callable=print_weekday,
+    provide_context=True,
+    dag=dag,
+)
 
 branching = BranchPythonOperator(
   task_id="branching", 
@@ -29,6 +44,4 @@ branching = BranchPythonOperator(
   dag=dag
 )
 
-days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-for day in days:
-    branching >> DummyOperator(task_id=day, dag=dag)
+print_weekday >> branching
