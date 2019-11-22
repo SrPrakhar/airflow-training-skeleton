@@ -3,7 +3,7 @@ from datetime import date, datetime, timedelta
 import airflow
 from airflow.models import DAG
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
-from airflow_training.operators import HttpToGcsOperator
+from airflow_training.operators.http_to_gcs_operator import HttpToGcsOperator
 
 args = {
 "owner": "Prakhar",
