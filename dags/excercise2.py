@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime, timedelta
 
 import airflow
 from airflow.models import DAG
@@ -8,7 +8,7 @@ from airflow.operators.python_operator import PythonOperator
 
 args = {
     'owner': 'Prakhar',
-    'start_date': '2019-11-17',
+    'start_date': datetime(2019, 11, 17),
 }
 
 dag = DAG(
