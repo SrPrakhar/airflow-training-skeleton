@@ -31,4 +31,4 @@ branching = BranchPythonOperator(
 
 days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 for day in days:
-branching >> DummyOperator(task_id=day, dag=dag)
+    branching >> DummyOperator(task_id=day, dag=dag)
