@@ -2,7 +2,7 @@
 from datetime import date, datetime, timedelta
 import airflow
 from airflow.models import DAG
-from airflow.contrib.operators.postgres_to_gcs_operator import BaseSQLToGoogleCloudStorageOperator
+from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
 
 args = {
 "owner": "Prakhar",
