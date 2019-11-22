@@ -22,7 +22,7 @@ def print_execution_date(**context):
     print("Today's date:", today)
 
 # [START howto_operator_bash]
-c = PythonOperator(
+print_execution_date = PythonOperator(
     task_id="print_execution_date",
     python_callable=print_execution_date,
     provide_context=True,
