@@ -27,9 +27,9 @@ pgsl_to_gcs = PostgresToGoogleCloudStorageOperator(
 
 
 http_to_gcs = HttpToGcsOperator(
-  task_id="get_currency_" + currency,
+  task_id="get_currency_" + "EUR",
   method="GET",
-  endpoint=f"/history?start_at={{yesterday_ds}}&end_at={{ds}}&symbols={currency}&base=GBP",
+  endpoint=f"/history?start_at={{yesterday_ds}}&end_at={{ds}}&symbols=EUR&base=GBP",
   #http_conn_id="airflow-training-currency-http",
   http_conn_id="http-default",
   gcs_path="currency/{{ ds }}-" + currency + ".json",
