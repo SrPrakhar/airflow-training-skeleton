@@ -25,7 +25,7 @@ def print_awesome_string():
 print_hello_world = PthonOperator(
     task_id="print_awesome_string",
     python_callable=print_awesome_string,
-    provide_context=True
+    provide_context=True,
     dag=dag,
 )
 # [END howto_operator_bash]
