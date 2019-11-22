@@ -18,7 +18,7 @@ dag = DAG(
     dagrun_timeout=timedelta(minutes=60),
 )
 
-def print_awesome_string():
+def print_awesome_string(**context):
     print('Hello, world!')
 
 # [START howto_operator_bash]
