@@ -26,7 +26,7 @@ def _get_email_name(execution_date, **context):
     if Value in ["Mon"]:
         return 'email_bob'
     elif Value in ["Tue", "Thu"]:
-        retuen 'email_joe'
+        return 'email_joe'
     else:
         return 'email_alice'
     
