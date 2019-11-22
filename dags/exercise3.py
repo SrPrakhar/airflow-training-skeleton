@@ -17,7 +17,7 @@ dag = DAG(
     schedule_interval="@daily",
 )
 
-def _get_weekday(execution_date, **context):
+def print_weekday(execution_date, **context):
     value = execution_date.strftime("%a")
     return value
 
